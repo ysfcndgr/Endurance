@@ -2,7 +2,7 @@
 
 pip install selenium
 
-1-)You can download the geckodriver
+1-)You can download the https://github.com/mozilla/geckodriver/releases
 
 2-)unzip it
 
