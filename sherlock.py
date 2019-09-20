@@ -4,14 +4,13 @@
 from  selenium import webdriver
 import time,sys
 from selenium.webdriver.firefox.options import Options
+from headless import headlessopen
 
 class sherlockClass():
     def sherlock(self,aranacakisi):
         print("[*] 23 platformdan aynı anda veri çekiliyor bu yüzden sherlock yavaş çalışır...")
         print("[*] Tahmini tamamlanma süresi : 2 dakika olarak belirlendi...")
-        options = Options()
-        options.headless = True
-        self.browser_yakala = webdriver.Firefox(options=options)
+        self.browser_yakala=headlessopen().headlessopenwith()
         #time.sleep(10)
         """
         selenium eski sürümlerinde kod satırı tamamlanmasa bile diğer işlemlere geçiyordu
