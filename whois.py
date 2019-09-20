@@ -7,6 +7,7 @@ from headless import headlessopen
 
 class whoisClass(sherlockClass):
     def aranacaksite(self,aranacaksiteyial):
+        print("[*] Estimated time 10 seconds")
         self.browser_yakala=headlessopen().headlessopenwith()
         self.browser_yakala.get("https://www.isimtescil.net/Whois")
         self.veriyial = self.browser_yakala.find_element_by_css_selector('#TxtWhois')
