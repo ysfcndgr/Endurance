@@ -3,11 +3,11 @@
 from  selenium import webdriver
 import time,sys
 from sherlock import*
+from headless import headlessopen
+
 class whoisClass(sherlockClass):
     def aranacaksite(self,aranacaksiteyial):
-        options = Options()
-        options.headless = True
-        self.browser_yakala = webdriver.Firefox(options=options)
+        self.browser_yakala=headlessopen().headlessopenwith()
         self.browser_yakala.get("https://www.isimtescil.net/Whois")
         self.veriyial = self.browser_yakala.find_element_by_css_selector('#TxtWhois')
         self.veriyial.click()
