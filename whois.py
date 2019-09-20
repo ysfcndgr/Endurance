@@ -7,7 +7,7 @@ class whoisClass(sherlockClass):
     def aranacaksite(self,aranacaksiteyial):
         options = Options()
         options.headless = True
-        self.browser_yakala = webdriver.Firefox(options=options,executable_path = r'C:\Users\Yusuf\Desktop\geckodriver.exe')
+        self.browser_yakala = webdriver.Firefox(options=options)
         self.browser_yakala.get("https://www.isimtescil.net/Whois")
         self.veriyial = self.browser_yakala.find_element_by_css_selector('#TxtWhois')
         self.veriyial.click()
