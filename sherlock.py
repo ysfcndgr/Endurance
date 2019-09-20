@@ -11,7 +11,7 @@ class sherlockClass():
         print("[*] Tahmini tamamlanma süresi : 2 dakika olarak belirlendi...")
         options = Options()
         options.headless = True
-        self.browser_yakala = webdriver.Firefox(options=options,executable_path = r'C:\Users\Yusuf\Desktop\geckodriver.exe')
+        self.browser_yakala = webdriver.Firefox(options=options)
         #time.sleep(10)
         """
         selenium eski sürümlerinde kod satırı tamamlanmasa bile diğer işlemlere geçiyordu
