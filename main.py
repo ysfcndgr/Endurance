@@ -7,10 +7,10 @@ import sys
 try:
     if sys.argv[1] == "--help":
         print("""
-    Arayüze hoşgeldin
-    Kullanım:
-    Birinin kullanıcı adıyla arama yapmak istiyorsan "python main.py --sherlock kullanıcıadı" şeklinde kullanmalısın.
-    Whois Bilgisi çekmek istiyorsan "python main.py --whois siteismi" şeklinde aramalısın.
+    Welcome to interface
+    How to use:
+    If you want to search someone's username, you have to type and search 'python main.py --sherlock username'
+    If you want to retrieve whois info you have to type and search 'python main.py  --whois sitename'
         """)
     elif sys.argv[1]=="--sherlock":
         objeyiuret = sherlockClass()
@@ -19,6 +19,6 @@ try:
         objeyiuret = whoisClass()
         objeyiuret.aranacaksite(sys.argv[2])
     else:
-        print("Hatalı giriş")
+        print("Incorrect entry")
 except IndexError:
-    print("Parametreleri bilmiyorsan --help komutunu çalıştırarak öğrenebilirsin")
+    print("If you do not know the parameter you can use --help command and find out")
