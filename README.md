@@ -8,3 +8,6 @@ pip install selenium
 
 3-)Copy that .exe file and put your into python parent folder (e.g., C:\Python34)
 
+# Usage 
+
+python main.py --help
