@@ -11,3 +11,7 @@
 # Usage 
 
 python main.py --help
+
+# Youtube Video
+
+https://www.youtube.com/watch?v=X9GfMbX2b0I
