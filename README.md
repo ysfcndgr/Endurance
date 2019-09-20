@@ -6,7 +6,7 @@
 
 4-)unzip it
 
-4-)Copy that .exe file and put your into python parent folder (e.g., C:\Python34)
+5-)Copy that .exe file and put your into python parent folder (e.g., C:\Python34)
 
 # Usage 
 
