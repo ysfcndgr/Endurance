@@ -1,3 +1,8 @@
+# what is used for
+
+Data collection, discovery
+
+
 # Establishment of libraries for a windows
 
 1-)pip install selenium
