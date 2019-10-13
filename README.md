@@ -1,4 +1,4 @@
-# what is used for
+# What is used for
 
 Data collection, discovery
 
