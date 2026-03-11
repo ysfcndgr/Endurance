@@ -1,24 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from  selenium import webdriver
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time,sys
 from sherlock import*
-from headless import headlessopen
+from headless import HeadlessBrowser
 
-class whoisClass(sherlockClass):
+class Whois(Sherlock):
     def aranacaksite(self,aranacaksiteyial):
         print("[*] Estimated time 10 seconds")
-        self.browser_yakala=headlessopen().headlessopenwith()
-        self.browser_yakala.get("https://www.isimtescil.net/Whois")
-        self.veriyial = self.browser_yakala.find_element_by_css_selector('#TxtWhois')
-        self.veriyial.click()
-        self.veriyial.send_keys(aranacaksiteyial)
-        self.tikla = self.browser_yakala.find_element_by_xpath('//*[@id="IsimTescilNET-2012"]/div/div[1]/div[2]/div')
-        self.tikla.click()
-        time.sleep(5)
-        self.elements = self.browser_yakala.find_elements_by_css_selector('#WhoQueryreturn')
-        self.liste = list()
-        self.ekranayazdir()
-        self.ciktilariyazdir()
-        self.browser_yakala.quit() 
+        self.browser_yakala=HeadlessBrowser().headlessopenwith()
+        try:
+            self.browser_yakala.get("https://www.isimtescil.net/Whois")
+            self.veriyial = self.browser_yakala.find_element(By.CSS_SELECTOR, '#TxtWhois')
+            self.veriyial.click()
+            self.veriyial.send_keys(aranacaksiteyial)
+            self.tikla = self.browser_yakala.find_element(By.XPATH, '//*[@id="IsimTescilNET-2012"]/div/div[1]/div[2]/div')
+            self.tikla.click()
+            time.sleep(5)
+            self.elements = self.browser_yakala.find_elements(By.CSS_SELECTOR, '#WhoQueryreturn')
+            self.liste = list()
+            self.ekranayazdir()
+            self.ciktilariyazdir()
+        finally:
+            self.browser_yakala.quit()
 

@@ -1,24 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from sherlock import sherlockClass
-from whois import whoisClass
-from  selenium import webdriver
-import sys
-try:
-    if sys.argv[1] == "--help":
-        print("""
-    Welcome to interface
-    How to use:
-    If you want to search someone's username, you have to type and search 'python main.py --sherlock username'
-    If you want to retrieve whois info you have to type and search 'python main.py  --whois sitename'
-        """)
-    elif sys.argv[1]=="--sherlock":
-        objeyiuret = sherlockClass()
-        objeyiuret.sherlock(sys.argv[2])
-    elif sys.argv[1] =="--whois":
-        objeyiuret = whoisClass()
-        objeyiuret.aranacaksite(sys.argv[2])
+import argparse
+from sherlock import Sherlock
+from whois import Whois
+
+def main():
+    parser = argparse.ArgumentParser(description="Welcome to interface. Search for username or whois info.")
+    parser.add_argument("--sherlock", help="Search someone's username (e.g., 'python main.py --sherlock username')")
+    parser.add_argument("--whois", help="Retrieve whois info for a site (e.g., 'python main.py --whois sitename')")
+
+    args = parser.parse_args()
+
+    if args.sherlock:
+        objeyiuret = Sherlock()
+        objeyiuret.sherlock(args.sherlock)
+    elif args.whois:
+        objeyiuret = Whois()
+        objeyiuret.aranacaksite(args.whois)
     else:
-        print("Incorrect entry")
-except IndexError:
-    print("If you do not know the parameter you can use --help command and find out")
+        parser.print_help()
+
+if __name__ == "__main__":
+    main()
